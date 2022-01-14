@@ -1,0 +1,121 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{ title.value: 'Bookid' }
+@UI.headerInfo.description.value: 'Fldate'
+@Search.searchable: true
+annotate view ZF_BOOKING with
+{
+
+
+  @UI.facet: [
+  { label: 'Booking', type: #IDENTIFICATION_REFERENCE }
+  ,  { label: 'Flight', type: #LINEITEM_REFERENCE, targetElement: '_flight' }
+   ]
+  @Search.defaultSearchElement: true
+  @UI.identification: [{
+      position: 10,
+      importance: #HIGH,
+      type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 10,
+
+      importance: #HIGH,
+      type: #STANDARD
+
+  }]
+  Bookid;
+
+  @UI.identification: [{
+    position: 20,
+    importance: #HIGH,
+    type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 20,
+
+      importance: #HIGH,
+      type: #STANDARD
+
+  }]
+  Carrid;
+  @UI.identification: [{
+    position: 30,
+    importance: #HIGH,
+    type: #STANDARD,
+    label: 'Price'
+  }]
+  @UI.lineItem: [{
+
+      position: 30,
+
+      importance: #HIGH,
+      type: #STANDARD
+
+  }]
+  Price;
+
+  @UI.identification: [{
+   position: 40,
+   importance: #HIGH,
+   type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 40,
+      type: #STANDARD
+
+  }]
+  Luggweight;
+  @UI.identification: [{
+  position: 60,
+  importance: #HIGH,
+  type: #STANDARD,
+  label: 'Class'
+  }]
+  @UI.lineItem: [{
+
+      position: 60,
+      type: #STANDARD
+
+  }]
+  Class;
+  @UI.identification: [{
+   position: 70,
+   importance: #HIGH,
+   type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 70,
+      type: #STANDARD
+
+  }]
+  Passname;
+  @UI.identification: [{
+  position: 70,
+  importance: #HIGH,
+  type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 70,
+      type: #STANDARD
+
+  }]
+  @UI.selectionField: [{ position: 50 }]
+  Fldate;
+  @UI.identification: [{
+  position: 100,
+  importance: #HIGH,
+  type: #STANDARD
+  }]
+  @UI.lineItem: [{
+
+      position: 100,
+      type: #STANDARD
+
+  }, { type: #FOR_ACTION, dataAction: 'BOPF:CANCEL_BOOKING', label: 'Cancel Booking' }]
+  Cancelled;
+}

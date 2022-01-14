@@ -1,0 +1,12 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZF_CUSTOMER
+    with 
+{
+    @UI.facet: [ { label: 'Customer', type: #IDENTIFICATION_REFERENCE } ]
+    @UI: {
+       lineItem: [ { position: 10, importance: #HIGH } ],
+       identification: [ { position: 10, importance: #HIGH } ]
+     }
+    Name;
+    
+}

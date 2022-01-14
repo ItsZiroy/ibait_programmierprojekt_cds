@@ -1,0 +1,11 @@
+@EndUserText.label: 'Flight access'
+@MappingRole: true
+define role ZF_FLIGHT_ACCESS {
+    grant
+        select
+            on
+                ZF_I_FLIGHT
+                    where
+                        ( Carrid ) = aspect pfcg_auth(S_CARRID, ACTVT = '03', CARRID);
+                        
+}

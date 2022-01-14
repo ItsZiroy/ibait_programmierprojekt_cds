@@ -1,0 +1,35 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+    headerInfo: {
+      typeName: 'Connection',
+      typeNamePlural: 'Connection',
+      title: { value: 'Connid' },
+      description: { value: 'Deptime' }
+    }
+}
+annotate view ZF_CONNECTION
+    with 
+{
+    @UI: {
+       lineItem: [ { position: 10, importance: #HIGH } ],
+       identification: [ { position: 10, importance: #HIGH } ]
+     }
+    Carrid;
+        @UI: {
+       lineItem: [ { position: 20, importance: #HIGH } ],
+       identification: [ { position: 20, importance: #HIGH } ]
+     }
+    Airpfrom;
+        @UI: {
+       lineItem: [ { position: 30, importance: #HIGH } ],
+       identification: [ { position: 30, importance: #HIGH } ]
+     }
+    Airpto;
+        @UI: {
+       lineItem: [ { position: 40, importance: #HIGH } ],
+       identification: [ { position: 40, importance: #HIGH } ]
+     }
+    Deptime;
+    
+    
+}
